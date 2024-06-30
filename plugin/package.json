@@ -1,0 +1,11 @@
+{
+  "name": "vite-plugin-codespaces-hmr",
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {
+    "vite": "^5.3.2"
+  },
+  "peerDependencies": {
+    "vite": "^4 || ^5"
+  }
+}
