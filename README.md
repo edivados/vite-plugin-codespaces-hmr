@@ -8,3 +8,5 @@ export default defineConfig({
   plugins: [codespacesHMR({ port: 3001 })]
 });
 ```
+
+Reference: https://github.com/vitejs/vite/issues/8666#issuecomment-1315694497
