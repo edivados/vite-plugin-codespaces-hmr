@@ -1,6 +1,6 @@
 export default function plugin() {
-  let hostname;
   if (process.env["CODESPACES"]) {
+    let hostname;
     return {
       name: "vite-plugin-codespaces-hmr",
       apply: "serve",
@@ -15,16 +15,15 @@ export default function plugin() {
         }
       },
       configureServer(server) {
-        server.httpServer.once('listening', () => { 
-          const port = server.httpServer.address().port; 
+        server.httpServer.once('listening', () => {
+          const port = server.httpServer.address().port;
           const codespaceName = process.env["CODESPACE_NAME"];
           const forwardingDomain = process.env["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"];
           hostname = `${codespaceName}-${port}.${forwardingDomain}`;
         });
       },
       transform(code, id) {
-        if
-          (
+        if (
           id.endsWith("/vite/dist/client/client.mjs") ||
           id.endsWith("/vite/dist/client/env.mjs")
         ) {
