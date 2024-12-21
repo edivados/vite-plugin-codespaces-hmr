@@ -1,2 +1,2 @@
 import { Plugin } from "vite";
-export default function plugin(options?: { port?: number }): Plugin | undefined;
+export default function plugin(): Plugin | undefined;
