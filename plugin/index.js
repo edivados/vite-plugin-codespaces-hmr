@@ -4,16 +4,6 @@ export default function plugin() {
     return {
       name: "vite-plugin-codespaces-hmr",
       apply: "serve",
-      config() {
-        return {
-          server: {
-            hmr: {
-              protocol: 'wss',
-              clientPort: 443
-            }
-          }
-        }
-      },
       configureServer(server) {
         server.httpServer.once('listening', () => {
           const port = server.httpServer.address().port;

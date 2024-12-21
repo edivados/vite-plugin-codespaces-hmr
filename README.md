@@ -15,13 +15,6 @@ export default defineConfig({
 });
 ```
 
-## Overview
-
-This plugin does the following:
-
-- Set hmr protocol to wss and clientPort to 443.
-- Replace \_\_HMR_HOSTNAME\_\_ in Vite's client.mjs and env.js with the forwarded address hostname.
-
 ## Run the example
 
 Run the example in a GitHub Codespace.
